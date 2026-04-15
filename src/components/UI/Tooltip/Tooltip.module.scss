@@ -1,0 +1,57 @@
+@use "../../../App.scss" as app;
+
+.trigger {
+
+    cursor: pointer;
+
+    &.tooltip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: app.$vh-20px;
+        height: app.$vh-20px;
+    
+        font-size: app.$vh-13px;
+        font-weight: 600;
+        color: app.$dark-second-gray;
+    
+        cursor: pointer;
+    
+        border: 0.0462vh solid app.$dark-stroke;
+        border-radius: 50%;
+    
+        background: app.alpha(app.$white-color, 0.1);
+    
+        &:hover {
+            color: app.$white-color;
+            
+            background: app.alpha(app.$white-color, 0.3);
+        }
+    }
+}
+
+.content {
+    position: absolute;
+    z-index: 1000;
+
+    padding: app.$vh-12px 0.7812vw;
+
+    opacity: 0;
+    visibility: hidden; 
+    pointer-events: none;
+
+    border-radius: app.$vh-12px;
+    border: app.$vh-1px solid app.$dark-stroke;
+    background: app.$orange-500;
+
+    transition: opacity 0.15s ease;
+
+    &.mounted {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+

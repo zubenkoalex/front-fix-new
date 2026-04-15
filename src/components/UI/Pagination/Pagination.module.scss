@@ -1,0 +1,81 @@
+@use "../../../App.scss" as app;
+
+.pagination {
+    display: flex;
+    gap: 0.8333vw;
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 3.7037vh;
+        width: 3.7037vh;
+
+        font-size: app.$vh-16px;
+        font-weight: 600;
+        color: app.$dark-second-gray;
+
+        cursor: pointer;
+
+        border-radius: app.$vh-6px;
+        border: app.$vh-1px solid app.$dark-second-gray;
+
+        .icon {
+            height: app.$vh-8px;
+
+            stroke: app.$dark-second-gray;
+            stroke-width: 1.5;
+
+            &.left {
+                transform: rotate(-90deg);
+            }
+            &.right {
+                transform: rotate(90deg);
+            }
+        }
+        
+        &:hover {
+            color: app.$white-color;
+            border-color: app.$white-color;
+
+            .icon {
+                stroke: app.$white-color;
+            }
+        }
+
+        &.active {
+            color: app.$orange-500;
+            border-color: app.$orange-500;
+            background: app.alpha(app.$orange-500, 0.1);
+        }
+
+        &.disabled {
+            opacity: 0.3;
+            cursor: default;
+
+            &:hover {
+                color: app.$dark-second-gray;
+                border-color: app.$dark-second-gray;
+
+                .icon {
+                    stroke: app.$dark-second-gray;
+                }
+            }
+        }
+
+        &.ellipsis {
+            cursor: default;
+            border-color: transparent;
+
+            &:hover {
+                color: app.$dark-second-gray;
+                border-color: transparent;
+
+                .icon {
+                    stroke: app.$dark-second-gray;
+                }
+            }
+        }
+    }
+}

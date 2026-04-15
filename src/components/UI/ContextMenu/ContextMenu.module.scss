@@ -1,0 +1,87 @@
+@use "../../../App.scss" as app;
+
+.context-menu {
+    position: absolute;
+
+    padding: app.$vh-10px 0.7812vw;
+
+    border-radius: app.$vh-14px;
+    border: app.$vh-1px solid app.$dark-stroke;
+    background: #181818;
+
+    .menu-buttons {
+        display: flex;
+        flex-direction: column;
+
+        .menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.1979vw;
+
+            padding: app.$vh-8px;
+
+            cursor: pointer;
+
+            border-radius: app.$vh-6px;
+
+            .content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5208vw;
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    font-size: app.$vh-14px;
+                    font-weight: 600;
+                    color: app.$white-color;
+                    white-space: nowrap;
+
+                    .description {
+                        font-size: app.$vh-12px;
+                        font-weight: 500;
+                        color: app.$dark-second-gray;
+                    }
+                }
+            }
+
+            .icon {
+                height: app.$vh-14px;
+                width: app.$vh-14px;
+
+                fill: app.$white-color;
+
+                &.linked {
+                    height: app.$vh-10px;
+
+                    fill: #505050;
+                }
+            }
+
+
+            &:hover {
+                background: app.$bg-dark-surface;
+            }
+        }
+
+        .line {
+            margin: app.$vh-5px 0;
+
+            height: app.$vh-1px;
+            width: 100%;
+
+            background: app.alpha(app.$white-color, 0.15);
+        }
+    }
+
+    &.subcontext {
+        top: 50%;
+        left: calc(100% + 0.2604vw);
+
+        padding: app.$vh-10px 0.5208vw;
+    }
+}

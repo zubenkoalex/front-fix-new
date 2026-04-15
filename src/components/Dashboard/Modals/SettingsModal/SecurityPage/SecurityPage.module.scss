@@ -1,0 +1,173 @@
+@use "../../../../../App.scss" as app;
+
+.account-page {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    .settings {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5555vh;
+
+        padding: app.$vh-10px 0.7812vw;
+
+        width: 100%;
+
+        box-sizing: border-box;
+        
+        .setting {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: app.$vh-20px 1.5625vw;
+
+            border-bottom: app.$vh-1px solid app.$dark-stroke;
+
+            &:nth-last-child(1) {
+                border-bottom: none;
+            }
+
+            .info {
+                display: flex;
+                align-items: center;
+                gap: 0.5208vw;
+
+                .setting-icon {
+                    height: app.$vh-20px;
+                    width: app.$vh-20px;
+
+                    &.google-authenticator {
+                        path:nth-child(1) {
+                            fill: #FFC107;
+                        }
+
+                        path:nth-child(2) {
+                            fill: #FF3D00;
+                        }
+
+                        path:nth-child(3) {
+                            fill: #4CAF50;
+                        }
+
+                        path:nth-child(4) {
+                            fill: #1976D2;
+                        }
+                    }
+                }
+
+                .key {
+                    font-size: app.$vh-16px;
+                    font-weight: 700;
+                    color: app.$dark-second-gray;
+                    white-space: nowrap;
+                }
+
+                .value {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.2604vw;
+
+                    font-size: app.$vh-16px;
+                    font-weight: 700;
+                    color: app.$white-color;
+                    white-space: nowrap;
+
+                    .icon {
+                        width: app.$vh-14px;
+                        height: app.$vh-14px;
+
+                        fill: app.$white-color;
+                    }
+                }
+            }
+
+            .action-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.4166vw;
+
+                padding: app.$vh-15px 0;
+
+                min-width: 9.375vw;
+
+                font-size: app.$vh-15px;
+                font-weight: 700;
+                color: app.$dark-second-gray;
+
+                cursor: pointer;
+                
+                border-radius: app.$vh-12px;
+                background: app.alpha(#151515, 0.5);
+                box-shadow: app.$glass-box-shadow;
+                
+                .icon {
+                    height: app.$vh-15px;
+
+                    fill: app.$dark-second-gray;
+                }
+
+                &:hover {
+                    background: #181818;
+                }
+
+                &.connected {
+                    color: app.$green-600;
+
+                    border: app.$vh-1px solid app.alpha(app.$green-600, 0.25);
+                    background: app.alpha(app.$green-600, 0.1);
+                    box-shadow: none;
+
+                    .icon {
+                        fill: app.$green-600;
+                    }
+
+                    &:hover {
+                        color: app.$red-600;
+
+                        border: app.$vh-1px solid app.alpha(app.$red-600, 0.25);
+                        background: app.alpha(app.$red-600, 0.1);
+                        box-shadow: none;
+
+
+                        .icon {
+                            fill: app.$red-600;
+                        }
+                    }
+                }
+
+                &.disconnected {
+                    color: app.$red-600;
+
+                    border: app.$vh-1px solid app.alpha(app.$red-600, 0.25);
+                    background: app.alpha(app.$red-600, 0.1);
+                    box-shadow: none;
+
+
+                    .icon {
+                        fill: app.$red-600;
+                    }
+
+                    &:hover {
+                        color: app.$green-600;
+
+                        border: app.$vh-1px solid app.alpha(app.$green-600, 0.25);
+                        background: app.alpha(app.$green-600, 0.1);
+                        box-shadow: none;
+
+                        .icon {
+                            fill: app.$green-600;
+                        }
+                    }
+                }
+            }
+
+            &.google-authenticator .info .key  {
+                color: app.$white-color;
+            }
+        }
+    }
+}

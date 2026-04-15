@@ -1,0 +1,204 @@
+F:\projects\my\projects\web-adzen
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+|  └── sounds
+|     ├── keyboard-click.mp3
+|     ├── notification-err.ogg
+|     ├── notification-info.ogg
+|     ├── notification-scc.ogg
+|     ├── notification-warning.ogg
+|     ├── ui-click.mp3
+|     ├── ui-load.mp3
+|     └── ui.mp3
+├── README.md
+├── src
+|  ├── api
+|  |  └── apiSlice.ts
+|  ├── App.scss
+|  ├── App.tsx
+|  ├── assets
+|  |  ├── 2faApp-mockup.png
+|  |  └── NewCompany
+|  |     ├── Checklist.png
+|  |     ├── Cone1.png
+|  |     ├── Cone2.png
+|  |     ├── Cone3.png
+|  |     ├── Cone4.png
+|  |     ├── Creatives.png
+|  |     ├── Forecasts.png
+|  |     ├── majestic_vehicles_1046.txt
+|  |     ├── Registration.png
+|  |     ├── Registration1.png
+|  |     ├── Target.png
+|  |     └── test.png
+|  ├── components
+|  |  ├── Authorization
+|  |  |  ├── Authorization.module.scss
+|  |  |  ├── Confirm
+|  |  |  ├── index.tsx
+|  |  |  ├── LogIn
+|  |  |  ├── Recovery
+|  |  |  ├── RecoveryPassword
+|  |  |  └── SignUp
+|  |  ├── Dashboard
+|  |  |  ├── index.ts
+|  |  |  ├── Modals
+|  |  |  └── SideBar
+|  |  ├── Landing
+|  |  |  ├── ChooseSection
+|  |  |  ├── CTASection
+|  |  |  ├── FeaturesSection
+|  |  |  ├── Footer
+|  |  |  ├── Header
+|  |  |  ├── index.tsx
+|  |  |  ├── ProcessSection
+|  |  |  └── StartSection
+|  |  ├── SVG
+|  |  |  ├── Account
+|  |  |  ├── Arrows
+|  |  |  ├── Bug
+|  |  |  ├── Calendar
+|  |  |  ├── Camera
+|  |  |  ├── Cards
+|  |  |  ├── Check
+|  |  |  ├── Copy
+|  |  |  ├── Cross
+|  |  |  ├── Dashboard
+|  |  |  ├── Devices
+|  |  |  ├── DisplayMode
+|  |  |  ├── Edit
+|  |  |  ├── Error
+|  |  |  ├── ExclamationMark
+|  |  |  ├── Eye
+|  |  |  ├── Figures
+|  |  |  ├── Files
+|  |  |  ├── Help
+|  |  |  ├── ImagePlaceholder
+|  |  |  ├── index.tsx
+|  |  |  ├── Info
+|  |  |  ├── interests
+|  |  |  ├── Key
+|  |  |  ├── Legend
+|  |  |  ├── Like
+|  |  |  ├── Lock
+|  |  |  ├── Logotype
+|  |  |  ├── Logout
+|  |  |  ├── Megaphone
+|  |  |  ├── Money
+|  |  |  ├── NotFound
+|  |  |  ├── Pause
+|  |  |  ├── Platforms
+|  |  |  ├── Plug
+|  |  |  ├── Plus
+|  |  |  ├── Policy
+|  |  |  ├── Search
+|  |  |  ├── Security
+|  |  |  ├── Settings
+|  |  |  ├── Sparkles
+|  |  |  ├── Stop
+|  |  |  ├── Themes
+|  |  |  ├── Trash
+|  |  |  ├── User
+|  |  |  └── Warning
+|  |  └── UI
+|  |     ├── AdCompany
+|  |     ├── BackgroundBlob
+|  |     ├── BackgroundMesh
+|  |     ├── Button
+|  |     ├── ChatInput
+|  |     ├── ChatMessage
+|  |     ├── Checkbox
+|  |     ├── CircularProgress
+|  |     ├── CodeBlock
+|  |     ├── CodeInput
+|  |     ├── ContextMenu
+|  |     ├── DatePicker
+|  |     ├── DeviceCard
+|  |     ├── Digit
+|  |     ├── Dropdown
+|  |     ├── FileUploader
+|  |     ├── GradientCard
+|  |     ├── Graph
+|  |     ├── index.tsx
+|  |     ├── Input
+|  |     ├── MarkdownRenderer
+|  |     ├── MetricsCard
+|  |     ├── Modal
+|  |     ├── Page
+|  |     ├── Pagination
+|  |     ├── PremiumPlan
+|  |     ├── Radio
+|  |     ├── RollingNumber
+|  |     ├── Section
+|  |     ├── SectionHeader
+|  |     ├── SectionMarker
+|  |     ├── SideBarCategory
+|  |     ├── Spinner
+|  |     ├── StatisticsCard
+|  |     ├── Toast
+|  |     ├── Tooltip
+|  |     └── TwoFactorCodeInput
+|  ├── hooks
+|  |  ├── redux.ts
+|  |  ├── useChatSend.ts
+|  |  ├── useClasses.ts
+|  |  └── useInput.ts
+|  ├── index.scss
+|  ├── index.tsx
+|  ├── models
+|  |  ├── Company.ts
+|  |  ├── Session.ts
+|  |  └── UserModel.ts
+|  ├── pages
+|  |  ├── Authorization
+|  |  |  ├── Authorization.module.scss
+|  |  |  └── Authorization.tsx
+|  |  ├── Dashboard
+|  |  |  ├── AiChatPage
+|  |  |  ├── CompaniesHistoryPage
+|  |  |  ├── Dashboard.module.scss
+|  |  |  ├── Dashboard.tsx
+|  |  |  ├── HomePage
+|  |  |  ├── NewCompanyPage
+|  |  |  └── PlansPage
+|  |  ├── index.tsx
+|  |  └── Landing
+|  |     └── Landing.tsx
+|  ├── services
+|  |  ├── accountService.ts
+|  |  ├── authorizationService.ts
+|  |  ├── chatStreamService.ts
+|  |  ├── dashboardService.ts
+|  |  └── fortests.ts
+|  ├── store
+|  |  ├── index.ts
+|  |  └── reducers
+|  |     ├── actions.ts
+|  |     ├── Authorization
+|  |     ├── Dashboard
+|  |     ├── Page
+|  |     └── User
+|  ├── types
+|  |  ├── Authorization.ts
+|  |  ├── CompanyThems.tsx
+|  |  ├── Dashboard.ts
+|  |  ├── images.d.ts
+|  |  ├── Lending.ts
+|  |  └── UI.ts
+|  ├── utils
+|  |  ├── index.ts
+|  |  ├── pxConvertor.ts
+|  |  ├── sounds.ts
+|  |  └── validator.ts
+|  └── vite-env.d.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+directory: 1013 file: 4217
+
+ignored: directory (113)

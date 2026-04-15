@@ -1,0 +1,80 @@
+@use "../../../App.scss" as app;
+
+.code-wrapper {
+    position: relative;
+
+    margin: app.$vh-16px 0;
+
+    overflow: hidden;
+
+    border-radius: app.$vh-8px;
+    background: app.alpha(app.$white-color, 0.01);
+    box-shadow: 0 app.$vh-4px app.$vh-6px app.alpha(app.$black-color, 0.1);
+  
+    .code-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        padding: app.$vh-5px 0.5208vw;
+        
+        border-bottom: app.$vh-1px solid app.$dark-stroke;
+        background: app.alpha(app.$white-color, 0.01);
+
+        .code-lang {
+            font-family: monospace;
+            font-size: app.$vh-12px;
+            font-weight: 600;
+            color: #61afef;
+
+            letter-spacing: 0.0462vh;
+            text-transform: lowercase;
+        }
+
+        .copy-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: app.$vh-5px;
+
+            cursor: pointer;
+
+            border: none;
+            border-radius: app.$vh-4px;
+            background: transparent;
+
+            .icon {
+                height: app.$vh-12px;
+                width: app.$vh-12px;
+
+                fill: app.$white-color;
+            }
+
+            &:hover {
+                background: app.alpha(app.$white-color, 0.1);
+            }
+        }
+    }
+
+    .code-block {
+        margin: 0;
+        padding: app.$vh-16px;
+
+        overflow-x: auto;
+        
+        code {
+            padding: 0;
+
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: app.$vh-15px;
+            
+            border: none;
+            background: transparent;
+        }
+    }
+}
+
+
+
+
