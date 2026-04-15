@@ -21,6 +21,27 @@ export const Forecasts: FC = () => {
         { pollingInterval: 180000 }
     );
 
+    // ==========================================
+    // 1. ИСПРАВЛЕНИЕ: ВСЕ ХУКИ СТРОГО ДО RETURN
+    // ==========================================
+    const platformInfo = useMemo(() => {
+        // Добавили ? (companyForecast?), чтобы не было ошибки до загрузки данных
+        return companyForecast?.platforms.find(p => p.key === selectedPlatform);
+    }, [companyForecast, selectedPlatform]);
+
+    const PlatformIcon = selectedPlatform ? AdCompanyIcons[selectedPlatform] : null;
+
+    const isValid = useMemo(() => {
+        return Boolean(selectedStrategy);
+    }, [selectedStrategy]);
+
+    useEffect(() => {
+        setValid(isValid);
+    }, [isValid, setValid]);
+
+    // ==========================================
+    // 2. ТЕПЕРЬ МОЖНО ДЕЛАТЬ РАННИЙ ВЫХОД
+    // ==========================================
     if (isFetching || !companyForecast)
         return (
             <div className={styles["content"]}>
@@ -29,22 +50,6 @@ export const Forecasts: FC = () => {
                 </div>
             </div>    
         )
-
-    const platformInfo = useMemo(() => {
-        return companyForecast.platforms.find(p => p.key === selectedPlatform);
-    }, [companyForecast, selectedPlatform]);
-
-    const PlatformIcon = selectedPlatform ? AdCompanyIcons[selectedPlatform] : null;
-
-    const isValid = useMemo(() => {
-        return Boolean(
-            selectedStrategy
-        );
-    }, [selectedStrategy]);
-
-    useEffect(() => {
-        setValid(isValid);
-    }, [isValid]);
 
     return (
         <div className={styles["content"]}>
@@ -82,7 +87,7 @@ export const Forecasts: FC = () => {
                                 {recommendedMetrics && Object.entries(recommendedMetrics).map(([key, value]) => (
                                     <div key={key} className={`${styles["statistic"]} ${styles[key]}`}>
                                         <span className={styles["key"]}>{AdCompanyMetricsNames[key]}</span>
-                                        <span className={styles["value"]}>~{formatThousands(value)}{key === "ctr" ? "%" : ""}</span>
+                                        <span className={styles["value"]}>~{formatThousands(value as number)}{key === "ctr" ? "%" : ""}</span>
                                     </div>
                                 ))}
                             </div>
@@ -157,7 +162,7 @@ export const Forecasts: FC = () => {
                                                         metricType={key}
                                                         Icon={AdCompanyMetricsIcons[key]}
                                                         content={AdCompanyMetricsNames[key]}
-                                                        value={`~${formatThousands(value)}${key === "ctr" ? "%" : ""}`} 
+                                                        value={`~${formatThousands(value as number)}${key === "ctr" ? "%" : ""}`} 
                                                     />
                                                 )
                                             })}
@@ -175,7 +180,7 @@ export const Forecasts: FC = () => {
                                                     metricType={key}
                                                     Icon={AdCompanyMetricsIcons[key]}
                                                     content={AdCompanyExpensesNames[key]}
-                                                    value={`~${formatThousands(value)} ₽`} 
+                                                    value={`~${formatThousands(value as number)} ₽`} 
                                                 />
                                             ))}
                                         </div>
