@@ -134,7 +134,7 @@ export const CreateAnimation: FC = () => {
                             className={styles["button"]}
                             onClick={() => {
                                 // БЫЛО: Ошибочный путь с лишним куском /new-company
-                                navigate("/dashboard/new-company/companies-history")
+                                navigate("/dashboard/companies-history")
                             }}
                         >
                             <span>На страницу кампании</span>
